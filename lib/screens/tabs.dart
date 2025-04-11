@@ -4,7 +4,6 @@ import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/filters.dart';
 import 'package:meals/screens/meals.dart';
 import 'package:meals/widgets/main_drawer.dart';
-import 'package:meals/providers/meals_provider.dart';
 import 'package:meals/providers/favorites_provider.dart';
 import 'package:meals/providers/filters_provider.dart';
 
@@ -51,14 +50,14 @@ class _TabsScreen extends ConsumerState<TabsScreen> {
     Widget activePage = CategoriesScreen(
       availableMeals: availableMeals,
     );
-    var activePageTitle = 'Categories';
+    var activePageTitle = 'Kategoriler';
 
     if (_selectedPageIndex == 1) {
       final favoriteMeals = ref.watch(favoriteMealsProvider);
       activePage = MealsScreen(
         meals: favoriteMeals,
       );
-      activePageTitle = "Your Favorites";
+      activePageTitle = "Senin Favorilerin";
     }
 
     return Scaffold(
@@ -73,11 +72,11 @@ class _TabsScreen extends ConsumerState<TabsScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.set_meal),
-            label: "Categories",
+            label: "Kategoriler",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.star),
-            label: "Favorites",
+            label: "Favoriler",
           ),
         ],
       ),

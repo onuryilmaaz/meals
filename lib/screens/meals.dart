@@ -30,7 +30,7 @@ class MealsScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            "Uh oh...nothing here!",
+            "Burada henüz bir şey yok.",
             style: Theme.of(context)
                 .textTheme
                 .headlineLarge!
@@ -40,7 +40,7 @@ class MealsScreen extends StatelessWidget {
             height: 16,
           ),
           Text(
-            "Try selecting a different category!",
+            "Farklı bir kategori seçmeyi deneyin!",
             style: Theme.of(context)
                 .textTheme
                 .bodyLarge!
